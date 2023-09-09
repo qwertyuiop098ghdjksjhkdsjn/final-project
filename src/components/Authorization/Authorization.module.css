@@ -1,0 +1,34 @@
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.input {
+    font-size: 18px;
+}
+
+.button {
+    align-self: flex-start;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.background {
+    background-color: #dcd9d9;
+    height: calc(100vh - 50px);
+    padding: 50px 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .background{
+        padding: 20px;
+    }
+
+    .button {
+        font-size: 15px;
+    }
+}

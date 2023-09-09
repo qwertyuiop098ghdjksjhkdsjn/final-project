@@ -1,0 +1,88 @@
+
+.images {
+    display: flex;
+    align-items: flex-start; 
+    width: 65%;
+    padding-top: 50px;
+}
+
+.photo1 {
+    width: 60%;
+}
+.photo300 {
+    width: 40%;
+    margin: 20px 0 0 -20px;
+}
+
+.container {
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    width: 30%;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.378);
+    padding: 15px; 
+    line-height: 120%;
+}
+
+.button {
+    font-size: 18px;
+    background-color:#dcd9d9 ;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.inform {
+    margin-top: 100px;
+    padding: 15px;
+    background-color: #f1f1f1;
+}
+
+
+@media screen and (max-width: 880px) {
+
+    .images {
+        width: 40%;
+        flex-direction: column;
+        gap: 10px;
+        padding-right: 10px;
+    }
+
+    .photo1 {
+        width: 100%;
+    }
+
+    .photo300 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .content{
+        width: 57%;
+        font-size: 17px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .images {
+        width: 60%;
+    }
+
+    .photo300 {
+        display: none;
+    }
+}

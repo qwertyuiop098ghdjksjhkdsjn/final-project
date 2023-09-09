@@ -1,0 +1,54 @@
+
+.table {
+    font-family: 'Montserrat', sans-serif;
+    margin: 50px auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table th, td {
+    border: 2px solid;
+    padding: 10px;
+}
+
+.button {
+    padding: 5px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.tableMobile {
+    font-family:'Montserrat', sans-serif;
+    font-size: 15px;
+    display: none;
+}
+
+.elements p {
+    margin-bottom: 10px;
+}
+
+.elements {
+    border: 3px solid black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.buttons button {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .table {
+        display: none;
+    }
+
+    .tableMobile {
+        display: block;
+        margin: 20px;
+    }
+}
