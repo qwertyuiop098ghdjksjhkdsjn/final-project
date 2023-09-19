@@ -32,6 +32,7 @@ function Header () {
         setToken(null);
         setUser(null);
         localStorage.removeItem("token");
+        navigationMain();
     }
 
 

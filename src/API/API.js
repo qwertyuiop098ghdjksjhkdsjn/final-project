@@ -9,10 +9,11 @@ const ID = "455d818e-c352-4064-80bb-09a867e83ac9";
 
 export async function signUp ({email, password, firstName, lastName, approved}) {
   try { 
-    await axios.post (url + "auth/sign_up", {email, password, clientId: ID, firstName, lastName, approved})
+   return await axios.post (url + "auth/sign_up", {email, password, clientId: ID, firstName, lastName, approved})
   }
    catch (error) {
     console.log(error)
+    return error
   }
 }
 
@@ -36,6 +37,7 @@ export async function singIn ({email, password}) {
   }
   catch (error) {
     console.log(error)
+    return error.response.data
   }
 }
 

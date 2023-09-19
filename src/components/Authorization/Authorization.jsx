@@ -17,10 +17,15 @@ function Authorization () {
 
     function submit () {
         singIn({email, password}).then(response => {
-            localStorage.setItem ("token", response.data.token);  //сохраняет токен в localStorage
+           console.log(response)
+            if(response.status == "OK"){
+                localStorage.setItem ("token", response.data.token);  //сохраняет токен в localStorage
             setUser (response.data.user);  //функция, которая сохраняет данные о пользователе в контексте 
             setToken(response.data.token); //функция, которая сохраняет токен в контексте
-            navigation("/");
+            navigation("/"); 
+            } else {
+                alert(response.message)
+            }
         })
     }
 

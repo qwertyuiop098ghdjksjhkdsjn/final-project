@@ -47,7 +47,6 @@ function TheftReport () {
     console.log(result)
     
         if (result.status == "OK") {
-            alert("Отправлено!")
             setLicense ('');
             setOwner('');
             setType ('');
@@ -55,6 +54,7 @@ function TheftReport () {
             setDate('');
             setDescriptions('');
             setChosenOfficer("");
+            alert("Отправлено!")
         } else {
             alert("error!")
         }
@@ -66,12 +66,12 @@ function TheftReport () {
     return (
         <div className={styles.background}>
             <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-                <input placeholder="licenseNumber" className={styles.input} onChange={(e) => setLicense (e.target.value)}/>
-                <input placeholder="ownerFullName" className={styles.input} onChange={(e) => setOwner (e.target.value)}/>
-                <input placeholder="type" className={styles.input} onChange={(e) => setType (e.target.value)}/>
-                <input placeholder="color" className={styles.input} onChange={(e) => setColor (e.target.value)}/>
-                <input placeholder="date" className={styles.input} onChange={(e) => setDate (e.target.value)}/>
-                <input placeholder="description" className={styles.input} onChange={(e) => setDescriptions (e.target.value)}/>
+                <input placeholder="licenseNumber" value={license} className={styles.input} onChange={(e) => setLicense (e.target.value)}/>
+                <input placeholder="ownerFullName" className={styles.input} value={owner} onChange={(e) => setOwner (e.target.value)}/>
+                <input placeholder="type: sport/ general" className={styles.input} value={type} onChange={(e) => setType (e.target.value)}/>
+                <input placeholder="color" className={styles.input} value={color} onChange={(e) => setColor (e.target.value)}/>
+                <input placeholder="date" className={styles.input} value={date} onChange={(e) => setDate (e.target.value)}/>
+                <input placeholder="description" className={styles.input} value={description} onChange={(e) => setDescriptions (e.target.value)}/>
               { user && user?.approved && 
                 <select className={styles.input} onChange={(e) => setChosenOfficer (e.target.value)}>
                     <option value="" selected disabled hidden>Choose here:</option>
